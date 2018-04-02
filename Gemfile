@@ -59,3 +59,6 @@ gem 'bootstrap', '~> 4.0.0'
 
 # Font Awesome
 gem 'font-awesome-rails'
+
+# i18n
+gem 'rails-i18n'

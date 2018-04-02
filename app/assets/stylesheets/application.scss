@@ -14,3 +14,31 @@
 
 @import "bootstrap";
 @import "font-awesome";
+body {
+    background: rgb(237, 237, 237);
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+#task-form {
+    margin: 10px 0;
+    background: rgb(221, 198, 89);
+    padding: 10px 10px 5px;
+}
+
+a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+h5 a:hover {
+    background: none;
+    text-decoration: line-through;
+    color: #336699;
+}
+
+span {
+    font-family: 'Chicle', cursive;
+}

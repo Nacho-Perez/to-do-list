@@ -44,7 +44,7 @@ class TasksController < ApplicationController
   private
     #Return all tasks through an instance variable
     def all_tasks
-      @tasks = Task.all
+      @tasks = Task.all.order(:deadline)
     end
 
     # Use callbacks to share common setup or constraints between actions.

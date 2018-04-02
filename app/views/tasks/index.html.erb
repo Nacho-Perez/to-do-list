@@ -1,16 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Tareas</h2>
-<ul>
-    <div id="tasks">    
-        <%= render @tasks %>
-    </div>
-</ul>
+<div class="row">
+  <div class="col-md-8">
+    <% if @tasks.exists? %>
+      <table class="table table-striped">  
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"><h2>Tareas pendientes</h2></th>   
+          </tr>
+        </thead>
+        <tbody id="tasks">
+          <%= render @tasks %>
+        </tbody>
+      </table>
+    <% else %>
+      <img src="./assets/tick.png"></img>
+      <h3>No hay tareas pendientes</h3>
+      <h5>Pulsa en el botón 'Añade una tarea' para iniciar la lista</h5>
+    <% end %>
+  </div>
 
-<br>
-
-<%= link_to 'Nueva Tarea', new_task_path, remote: true %>
-
-<br><br>
-
-<div id="task-form" style="display:none;"></div>
+  <div class="col-md-4"> 
+    <br>
+    <%= link_to new_task_path, remote: true do %>
+      <button class="btn btn-warning"><span class="glyphicon glyphicon-plus"></span> Añade una tarea </button>
+    <% end %>
+    <br><br>
+    <div id="task-form" style="display:none;"></div>
+    <img src="./assets/tasks.png"></img>
+  </div>
+</div>

@@ -1,2 +1,6 @@
-$('#tasks').html("<%= j (render @tasks) %>");
-$('#task-form').slideUp(350);
+<% if @task.valid? %>
+    $('#tasks').html("<%= j (render @tasks) %>");
+    $('#task-form').slideUp(350);
+<% else %>
+    alert("Error: <%= @task.errors.full_messages.join(', ')%>");
+<% end %>
