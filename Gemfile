@@ -62,3 +62,7 @@ gem 'font-awesome-rails'
 
 # i18n
 gem 'rails-i18n'
+
+# Datetime picker
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap4-datetime-picker-rails'
